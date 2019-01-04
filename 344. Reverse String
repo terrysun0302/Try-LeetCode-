@@ -1,0 +1,46 @@
+344. Reverse String
+Easy
+
+617
+
+379
+
+Favorite
+
+Share
+Write a function that takes a string as input and returns the string reversed.
+
+Example 1:
+
+Input: "hello"
+Output: "olleh"
+Example 2:
+
+Input: "A man, a plan, a canal: Panama"
+Output: "amanaP :lanac a ,nalp a ,nam A"
+
+class Solution:
+    def reverseString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        rev_s = []
+        s = list(s)
+        
+        for i in range(len(s)):
+            rev_s.append(s.pop())
+            
+        return "".join(rev_s)
+    
+    class Solution:
+    def reverseString(self, string):
+        """
+        :type s: str
+        :rtype: str
+        """
+        # Python makes it very easy to reverse a string
+        # use [::-1]
+        reversed_string = string[::-1]
+        
+        return reversed_string 
