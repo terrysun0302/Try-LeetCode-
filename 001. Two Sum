@@ -18,3 +18,27 @@ class Solution:
         		return [rev_table[second_addend], i]
         	else:
         		rev_table[nums[i]] = i
+                
+
+### a variant: find all the combinations
+
+class Solution:
+    def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        
+        rev = dict()
+        
+        col = []
+        
+        for i in range(len(candidates)):
+            diff = target - candidates[i]
+            if diff in rev:
+                col.append([rev[diff], i])
+            else:
+                rev[candidates[i]] = i
+        return col
+                
